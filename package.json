@@ -1,0 +1,10 @@
+{
+  "name": "nuvio-lg",
+  "private": true,
+  "type": "module",
+  "version": "0.1.0",
+  "scripts": {
+    "check:syntax": "node --check js/app.js && node --check js/config.js && node --check js/utils/html.js && node --check js/utils/lazyMedia.js",
+    "build:package-staging": "powershell -ExecutionPolicy Bypass -File scripts/build-package-staging.ps1"
+  }
+}

@@ -1,0 +1,22 @@
+/* Shared app layout primitives */
+
+.app-shell,
+.home-shell,
+.search-screen-shell,
+.library-shell,
+.discover-shell,
+.series-detail-shell {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.scroll-y {
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.full-bleed {
+    width: 100vw;
+    height: 100vh;
+}

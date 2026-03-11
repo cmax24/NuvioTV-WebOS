@@ -1,0 +1,329 @@
+@font-face {
+    font-family: "Nuvio Inter";
+    src: url("../assets/fonts/inter_variable.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 100 900;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Nuvio DM Sans";
+    src: url("../assets/fonts/dm_sans_variable.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 100 900;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Nuvio Open Sans";
+    src: url("../assets/fonts/opensans_variable.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 100 900;
+    font-display: swap;
+}
+
+:root {
+    --bg-color: #0e0f12;
+    --text-color: #ffffff;
+    --focus-color: #f5f8fc;
+    --card-bg: #1a1c20;
+    --focus-ring: 0 0 0 3px rgba(245, 249, 255, 0.95), 0 0 0 6px rgba(245, 249, 255, 0.2);
+    /* Theme token palette (auto-generated from components.css) */
+    --theme-color-hex-000000: #000000;
+    --theme-color-hex-04070c: #04070c;
+    --theme-color-hex-05090f: #05090f;
+    --theme-color-hex-050b14: #050b14;
+    --theme-color-hex-06090e: #06090e;
+    --theme-color-hex-07090d: #07090d;
+    --theme-color-hex-080b10: #080b10;
+    --theme-color-hex-0a0d12: #0a0d12;
+    --theme-color-hex-0a1727: #0a1727;
+    --theme-color-hex-0e0f12: #0e0f12;
+    --theme-color-hex-0f141d: #0f141d;
+    --theme-color-hex-111: #111;
+    --theme-color-hex-11151c: #11151c;
+    --theme-color-hex-111722: #111722;
+    --theme-color-hex-12161d: #12161d;
+    --theme-color-hex-14a44d: #14a44d;
+    --theme-color-hex-16191f: #16191f;
+    --theme-color-hex-1a212b: #1a212b;
+    --theme-color-hex-1a2230: #1a2230;
+    --theme-color-hex-1b1e24: #1b1e24;
+    --theme-color-hex-1b2028: #1b2028;
+    --theme-color-hex-1b466f: #1b466f;
+    --theme-color-hex-1d232d: #1d232d;
+    --theme-color-hex-228bf3: #228bf3;
+    --theme-color-hex-2a2f37: #2a2f37;
+    --theme-color-hex-2ebb67: #2ebb67;
+    --theme-color-hex-3eb866: #3eb866;
+    --theme-color-hex-c84a4a: #c84a4a;
+    --theme-color-hex-e7b432: #e7b432;
+    --theme-color-hex-ecd03d: #ecd03d;
+    --theme-color-hex-ecf2f8: #ecf2f8;
+    --theme-color-hex-edf2f8: #edf2f8;
+    --theme-color-hex-edf3fa: #edf3fa;
+    --theme-color-hex-eef3f9: #eef3f9;
+    --theme-color-hex-eef4fb: #eef4fb;
+    --theme-color-hex-f2f7fd: #f2f7fd;
+    --theme-color-hex-f4f8fd: #f4f8fd;
+    --theme-color-hex-f5f8fc: #f5f8fc;
+    --theme-color-hex-f6fbff: #f6fbff;
+    --theme-color-hex-f7fcff: #f7fcff;
+    --theme-color-hex-f8fbff: #f8fbff;
+    --theme-color-hex-f9fbff: #f9fbff;
+    --theme-color-hex-ffb300: #ffb300;
+    --theme-color-hex-ffbf00: #ffbf00;
+    --theme-color-hex-fff: #fff;
+    --theme-color-hex-ffffff: #ffffff;
+    --theme-color-rgba-0-0-0-0: rgba(0, 0, 0, 0);
+    --theme-color-rgba-0-0-0-0p05: rgba(0, 0, 0, 0.05);
+    --theme-color-rgba-0-0-0-0p2: rgba(0, 0, 0, 0.2);
+    --theme-color-rgba-0-0-0-0p26: rgba(0, 0, 0, 0.26);
+    --theme-color-rgba-0-0-0-0p28: rgba(0, 0, 0, 0.28);
+    --theme-color-rgba-0-0-0-0p34: rgba(0, 0, 0, 0.34);
+    --theme-color-rgba-0-0-0-0p44: rgba(0, 0, 0, 0.44);
+    --theme-color-rgba-0-0-0-0p45: rgba(0, 0, 0, 0.45);
+    --theme-color-rgba-0-0-0-0p48: rgba(0, 0, 0, 0.48);
+    --theme-color-rgba-0-0-0-0p55: rgba(0, 0, 0, 0.55);
+    --theme-color-rgba-0-0-0-0p56: rgba(0, 0, 0, 0.56);
+    --theme-color-rgba-0-0-0-0p58: rgba(0, 0, 0, 0.58);
+    --theme-color-rgba-0-0-0-0p65: rgba(0, 0, 0, 0.65);
+    --theme-color-rgba-0-0-0-0p68: rgba(0, 0, 0, 0.68);
+    --theme-color-rgba-0-0-0-0p7: rgba(0, 0, 0, 0.7);
+    --theme-color-rgba-0-0-0-0p72: rgba(0, 0, 0, 0.72);
+    --theme-color-rgba-0-0-0-0p82: rgba(0, 0, 0, 0.82);
+    --theme-color-rgba-0-0-0-0p85: rgba(0, 0, 0, 0.85);
+    --theme-color-rgba-0-0-0-0p92: rgba(0, 0, 0, 0.92);
+    --theme-color-rgba-1-4-8-0p94: rgba(1, 4, 8, 0.94);
+    --theme-color-rgba-1-4-8-0p98: rgba(1, 4, 8, 0.98);
+    --theme-color-rgba-10-14-21-0p82: rgba(10, 14, 21, 0.82);
+    --theme-color-rgba-10-14-21-0p95: rgba(10, 14, 21, 0.95);
+    --theme-color-rgba-10-16-24-0p84: rgba(10, 16, 24, 0.84);
+    --theme-color-rgba-11-15-21-0p9: rgba(11, 15, 21, 0.9);
+    --theme-color-rgba-11-15-22-0p4: rgba(11, 15, 22, 0.4);
+    --theme-color-rgba-11-15-22-0p68: rgba(11, 15, 22, 0.68);
+    --theme-color-rgba-11-15-22-0p78: rgba(11, 15, 22, 0.78);
+    --theme-color-rgba-11-15-22-0p82: rgba(11, 15, 22, 0.82);
+    --theme-color-rgba-12-17-25-0p76: rgba(12, 17, 25, 0.76);
+    --theme-color-rgba-12-17-25-0p86: rgba(12, 17, 25, 0.86);
+    --theme-color-rgba-13-19-27-0p92: rgba(13, 19, 27, 0.92);
+    --theme-color-rgba-14-18-24-0p5: rgba(14, 18, 24, 0.5);
+    --theme-color-rgba-15-20-28-0p7: rgba(15, 20, 28, 0.7);
+    --theme-color-rgba-16-19-24-0p95: rgba(16, 19, 24, 0.95);
+    --theme-color-rgba-18-23-31-0p9: rgba(18, 23, 31, 0.9);
+    --theme-color-rgba-180-48-30-0p26: rgba(180, 48, 30, 0.26);
+    --theme-color-rgba-190-40-18-0p26: rgba(190, 40, 18, 0.26);
+    --theme-color-rgba-195-44-28-0p18: rgba(195, 44, 28, 0.18);
+    --theme-color-rgba-195-44-28-0p22: rgba(195, 44, 28, 0.22);
+    --theme-color-rgba-198-40-40-0p15: rgba(198, 40, 40, 0.15);
+    --theme-color-rgba-20-24-30-0p98: rgba(20, 24, 30, 0.98);
+    --theme-color-rgba-20-24-31-0p72: rgba(20, 24, 31, 0.72);
+    --theme-color-rgba-216-228-241-0p85: rgba(216, 228, 241, 0.85);
+    --theme-color-rgba-219-230-243-0p64: rgba(219, 230, 243, 0.64);
+    --theme-color-rgba-219-231-244-0p62: rgba(219, 231, 244, 0.62);
+    --theme-color-rgba-220-230-242-0p52: rgba(220, 230, 242, 0.52);
+    --theme-color-rgba-220-231-242-0p72: rgba(220, 231, 242, 0.72);
+    --theme-color-rgba-220-231-244-0p62: rgba(220, 231, 244, 0.62);
+    --theme-color-rgba-220-231-244-0p66: rgba(220, 231, 244, 0.66);
+    --theme-color-rgba-220-231-244-0p72: rgba(220, 231, 244, 0.72);
+    --theme-color-rgba-221-232-244-0p64: rgba(221, 232, 244, 0.64);
+    --theme-color-rgba-222-233-246-0p8: rgba(222, 233, 246, 0.8);
+    --theme-color-rgba-222-234-247-0p72: rgba(222, 234, 247, 0.72);
+    --theme-color-rgba-223-233-245-0p66: rgba(223, 233, 245, 0.66);
+    --theme-color-rgba-223-233-245-0p76: rgba(223, 233, 245, 0.76);
+    --theme-color-rgba-224-234-245-0p7: rgba(224, 234, 245, 0.7);
+    --theme-color-rgba-224-234-245-0p72: rgba(224, 234, 245, 0.72);
+    --theme-color-rgba-224-234-245-0p82: rgba(224, 234, 245, 0.82);
+    --theme-color-rgba-225-234-245-0p6: rgba(225, 234, 245, 0.6);
+    --theme-color-rgba-225-235-246-0p84: rgba(225, 235, 246, 0.84);
+    --theme-color-rgba-225-235-247-0p8: rgba(225, 235, 247, 0.8);
+    --theme-color-rgba-226-234-244-0p68: rgba(226, 234, 244, 0.68);
+    --theme-color-rgba-226-235-246-0p52: rgba(226, 235, 246, 0.52);
+    --theme-color-rgba-226-235-246-0p82: rgba(226, 235, 246, 0.82);
+    --theme-color-rgba-226-236-247-0p7: rgba(226, 236, 247, 0.7);
+    --theme-color-rgba-226-236-247-0p74: rgba(226, 236, 247, 0.74);
+    --theme-color-rgba-226-236-247-0p78: rgba(226, 236, 247, 0.78);
+    --theme-color-rgba-227-236-247-0p82: rgba(227, 236, 247, 0.82);
+    --theme-color-rgba-228-236-246-0p72: rgba(228, 236, 246, 0.72);
+    --theme-color-rgba-228-239-251-0p86: rgba(228, 239, 251, 0.86);
+    --theme-color-rgba-229-237-246-0p72: rgba(229, 237, 246, 0.72);
+    --theme-color-rgba-230-238-246-0p84: rgba(230, 238, 246, 0.84);
+    --theme-color-rgba-230-239-249-0p72: rgba(230, 239, 249, 0.72);
+    --theme-color-rgba-231-238-246-0p82: rgba(231, 238, 246, 0.82);
+    --theme-color-rgba-231-239-247-0p84: rgba(231, 239, 247, 0.84);
+    --theme-color-rgba-231-239-248-0p7: rgba(231, 239, 248, 0.7);
+    --theme-color-rgba-231-241-252-0p9: rgba(231, 241, 252, 0.9);
+    --theme-color-rgba-232-239-246-0p72: rgba(232, 239, 246, 0.72);
+    --theme-color-rgba-232-241-251-0p92: rgba(232, 241, 251, 0.92);
+    --theme-color-rgba-233-241-249-0p78: rgba(233, 241, 249, 0.78);
+    --theme-color-rgba-233-241-249-0p84: rgba(233, 241, 249, 0.84);
+    --theme-color-rgba-233-241-249-0p85: rgba(233, 241, 249, 0.85);
+    --theme-color-rgba-233-241-250-0p86: rgba(233, 241, 250, 0.86);
+    --theme-color-rgba-234-241-250-0p82: rgba(234, 241, 250, 0.82);
+    --theme-color-rgba-235-242-252-0p92: rgba(235, 242, 252, 0.92);
+    --theme-color-rgba-235-244-253-0p82: rgba(235, 244, 253, 0.82);
+    --theme-color-rgba-236-242-250-0p88: rgba(236, 242, 250, 0.88);
+    --theme-color-rgba-236-243-251-0p82: rgba(236, 243, 251, 0.82);
+    --theme-color-rgba-236-243-251-0p88: rgba(236, 243, 251, 0.88);
+    --theme-color-rgba-236-243-252-0p92: rgba(236, 243, 252, 0.92);
+    --theme-color-rgba-236-243-252-0p95: rgba(236, 243, 252, 0.95);
+    --theme-color-rgba-236-244-252-0p86: rgba(236, 244, 252, 0.86);
+    --theme-color-rgba-236-244-252-0p88: rgba(236, 244, 252, 0.88);
+    --theme-color-rgba-236-245-255-0p86: rgba(236, 245, 255, 0.86);
+    --theme-color-rgba-237-243-250-0p9: rgba(237, 243, 250, 0.9);
+    --theme-color-rgba-237-244-251-0p74: rgba(237, 244, 251, 0.74);
+    --theme-color-rgba-237-244-251-0p84: rgba(237, 244, 251, 0.84);
+    --theme-color-rgba-238-244-252-0p92: rgba(238, 244, 252, 0.92);
+    --theme-color-rgba-238-245-252-0p9: rgba(238, 245, 252, 0.9);
+    --theme-color-rgba-239-245-251-0p72: rgba(239, 245, 251, 0.72);
+    --theme-color-rgba-239-245-251-0p9: rgba(239, 245, 251, 0.9);
+    --theme-color-rgba-239-246-253-0p9: rgba(239, 246, 253, 0.9);
+    --theme-color-rgba-239-247-255-0p92: rgba(239, 247, 255, 0.92);
+    --theme-color-rgba-24-182-84-0p94: rgba(24, 182, 84, 0.94);
+    --theme-color-rgba-240-246-252-0p92: rgba(240, 246, 252, 0.92);
+    --theme-color-rgba-240-246-253-0p92: rgba(240, 246, 253, 0.92);
+    --theme-color-rgba-240-247-255-0p96: rgba(240, 247, 255, 0.96);
+    --theme-color-rgba-241-247-254-0p95: rgba(241, 247, 254, 0.95);
+    --theme-color-rgba-241-247-255-0p86: rgba(241, 247, 255, 0.86);
+    --theme-color-rgba-241-247-255-0p9: rgba(241, 247, 255, 0.9);
+    --theme-color-rgba-241-247-255-0p92: rgba(241, 247, 255, 0.92);
+    --theme-color-rgba-241-248-255-0p95: rgba(241, 248, 255, 0.95);
+    --theme-color-rgba-241-248-255-0p96: rgba(241, 248, 255, 0.96);
+    --theme-color-rgba-242-247-254-0p9: rgba(242, 247, 254, 0.9);
+    --theme-color-rgba-242-248-255-0p96: rgba(242, 248, 255, 0.96);
+    --theme-color-rgba-243-248-255-0p95: rgba(243, 248, 255, 0.95);
+    --theme-color-rgba-244-248-253-0p96: rgba(244, 248, 253, 0.96);
+    --theme-color-rgba-244-249-255-0p92: rgba(244, 249, 255, 0.92);
+    --theme-color-rgba-245-249-255-0p2: rgba(245, 249, 255, 0.2);
+    --theme-color-rgba-245-249-255-0p22: rgba(245, 249, 255, 0.22);
+    --theme-color-rgba-245-249-255-0p24: rgba(245, 249, 255, 0.24);
+    --theme-color-rgba-245-249-255-0p26: rgba(245, 249, 255, 0.26);
+    --theme-color-rgba-245-249-255-0p32: rgba(245, 249, 255, 0.32);
+    --theme-color-rgba-245-249-255-0p45: rgba(245, 249, 255, 0.45);
+    --theme-color-rgba-245-249-255-0p9: rgba(245, 249, 255, 0.9);
+    --theme-color-rgba-245-249-255-0p95: rgba(245, 249, 255, 0.95);
+    --theme-color-rgba-245-249-255-0p96: rgba(245, 249, 255, 0.96);
+    --theme-color-rgba-245-249-255-0p98: rgba(245, 249, 255, 0.98);
+    --theme-color-rgba-245-250-255-0p92: rgba(245, 250, 255, 0.92);
+    --theme-color-rgba-245-250-255-0p95: rgba(245, 250, 255, 0.95);
+    --theme-color-rgba-245-250-255-0p96: rgba(245, 250, 255, 0.96);
+    --theme-color-rgba-246-250-255-0p96: rgba(246, 250, 255, 0.96);
+    --theme-color-rgba-248-251-255-0p96: rgba(248, 251, 255, 0.96);
+    --theme-color-rgba-255-255-255-0p03: rgba(255, 255, 255, 0.03);
+    --theme-color-rgba-255-255-255-0p04: rgba(255, 255, 255, 0.04);
+    --theme-color-rgba-255-255-255-0p05: rgba(255, 255, 255, 0.05);
+    --theme-color-rgba-255-255-255-0p06: rgba(255, 255, 255, 0.06);
+    --theme-color-rgba-255-255-255-0p07: rgba(255, 255, 255, 0.07);
+    --theme-color-rgba-255-255-255-0p08: rgba(255, 255, 255, 0.08);
+    --theme-color-rgba-255-255-255-0p1: rgba(255, 255, 255, 0.1);
+    --theme-color-rgba-255-255-255-0p12: rgba(255, 255, 255, 0.12);
+    --theme-color-rgba-255-255-255-0p14: rgba(255, 255, 255, 0.14);
+    --theme-color-rgba-255-255-255-0p15: rgba(255, 255, 255, 0.15);
+    --theme-color-rgba-255-255-255-0p16: rgba(255, 255, 255, 0.16);
+    --theme-color-rgba-255-255-255-0p18: rgba(255, 255, 255, 0.18);
+    --theme-color-rgba-255-255-255-0p2: rgba(255, 255, 255, 0.2);
+    --theme-color-rgba-255-255-255-0p22: rgba(255, 255, 255, 0.22);
+    --theme-color-rgba-255-255-255-0p24: rgba(255, 255, 255, 0.24);
+    --theme-color-rgba-255-255-255-0p26: rgba(255, 255, 255, 0.26);
+    --theme-color-rgba-255-255-255-0p28: rgba(255, 255, 255, 0.28);
+    --theme-color-rgba-255-255-255-0p3: rgba(255, 255, 255, 0.3);
+    --theme-color-rgba-255-255-255-0p38: rgba(255, 255, 255, 0.38);
+    --theme-color-rgba-255-255-255-0p4: rgba(255, 255, 255, 0.4);
+    --theme-color-rgba-255-255-255-0p45: rgba(255, 255, 255, 0.45);
+    --theme-color-rgba-255-255-255-0p8: rgba(255, 255, 255, 0.8);
+    --theme-color-rgba-255-255-255-0p88: rgba(255, 255, 255, 0.88);
+    --theme-color-rgba-255-255-255-0p9: rgba(255, 255, 255, 0.9);
+    --theme-color-rgba-255-255-255-0p95: rgba(255, 255, 255, 0.95);
+    --theme-color-rgba-255-255-255-0p96: rgba(255, 255, 255, 0.96);
+    --theme-color-rgba-26-29-36-0p9: rgba(26, 29, 36, 0.9);
+    --theme-color-rgba-28-31-38-0p75: rgba(28, 31, 38, 0.75);
+    --theme-color-rgba-3-6-10-0p95: rgba(3, 6, 10, 0.95);
+    --theme-color-rgba-3-6-11-0p96: rgba(3, 6, 11, 0.96);
+    --theme-color-rgba-31-34-40-0p78: rgba(31, 34, 40, 0.78);
+    --theme-color-rgba-31-35-42-0p82: rgba(31, 35, 42, 0.82);
+    --theme-color-rgba-34-38-45-0p8: rgba(34, 38, 45, 0.8);
+    --theme-color-rgba-35-39-47-0p66: rgba(35, 39, 47, 0.66);
+    --theme-color-rgba-35-39-47-0p95: rgba(35, 39, 47, 0.95);
+    --theme-color-rgba-4-7-11-0p92: rgba(4, 7, 11, 0.92);
+    --theme-color-rgba-4-7-11-0p94: rgba(4, 7, 11, 0.94);
+    --theme-color-rgba-4-8-13-0p84: rgba(4, 8, 13, 0.84);
+    --theme-color-rgba-4-8-13-0p88: rgba(4, 8, 13, 0.88);
+    --theme-color-rgba-42-46-54-0p92: rgba(42, 46, 54, 0.92);
+    --theme-color-rgba-45-50-60-0p92: rgba(45, 50, 60, 0.92);
+    --theme-color-rgba-5-8-13-0p68: rgba(5, 8, 13, 0.68);
+    --theme-color-rgba-5-9-14-0p9: rgba(5, 9, 14, 0.9);
+    --theme-color-rgba-5-9-15-0p74: rgba(5, 9, 15, 0.74);
+    --theme-color-rgba-5-9-15-0p96: rgba(5, 9, 15, 0.96);
+    --theme-color-rgba-7-10-15-0p84: rgba(7, 10, 15, 0.84);
+    --theme-color-rgba-7-10-15-0p86: rgba(7, 10, 15, 0.86);
+    --theme-color-rgba-7-11-16-0p3: rgba(7, 11, 16, 0.3);
+    --theme-color-rgba-7-11-16-0p44: rgba(7, 11, 16, 0.44);
+    --theme-color-rgba-7-11-16-0p72: rgba(7, 11, 16, 0.72);
+    --theme-color-rgba-8-10-14-0p8: rgba(8, 10, 14, 0.8);
+    --theme-color-rgba-8-11-15-0p95: rgba(8, 11, 15, 0.95);
+    --theme-color-rgba-8-12-17-0p18: rgba(8, 12, 17, 0.18);
+    --theme-color-rgba-8-12-17-0p2: rgba(8, 12, 17, 0.2);
+    --theme-color-rgba-8-12-17-0p34: rgba(8, 12, 17, 0.34);
+    --theme-color-rgba-8-12-17-0p36: rgba(8, 12, 17, 0.36);
+    --theme-color-rgba-8-12-17-0p68: rgba(8, 12, 17, 0.68);
+    --theme-color-rgba-8-12-17-0p72: rgba(8, 12, 17, 0.72);
+    --theme-color-rgba-8-12-18-0p82: rgba(8, 12, 18, 0.82);
+    --theme-color-rgba-9-13-19-0p96: rgba(9, 13, 19, 0.96);
+    --theme-color-rgba-9-13-20-0p88: rgba(9, 13, 20, 0.88);
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background: var(--bg-color);
+    color: var(--text-color);
+    font-family: "Nuvio Inter", "LG Smart UI", "Segoe UI", Arial, sans-serif;
+    overflow: hidden;
+}
+
+#app {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.screen {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+}
+
+.row {
+    margin: 40px;
+}
+
+.card {
+    display: inline-block;
+    width: 250px;
+    height: 140px;
+    margin-right: 20px;
+    background: var(--theme-color-rgba-35-39-47-0p95);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+    will-change: transform;
+}
+
+.card.focused {
+    transform: scale(1.1);
+    box-shadow: 0 0 0 2px var(--theme-color-rgba-245-249-255-0p9);
+}
+
+.focusable {
+    will-change: transform;
+}
+
+.lazy-bg-pending {
+    background-color: var(--theme-color-rgba-255-255-255-0p03);
+}
+
+*:focus {
+    outline: none !important;
+}

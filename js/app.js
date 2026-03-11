@@ -1,0 +1,79 @@
+import { Router } from "./ui/navigation/router.js";
+import { FocusEngine } from "./ui/navigation/focusEngine.js";
+import { PlayerController } from "./core/player/playerController.js";
+import { AuthManager } from "./core/auth/authManager.js";
+import { AuthState } from "./core/auth/authState.js";
+import { StartupSyncService } from "./core/profile/startupSyncService.js";
+import { ThemeManager } from "./ui/theme/themeManager.js";
+import { hasSupabaseConfig } from "./config.js";
+import { installGlobalInnerHtmlSanitizer } from "./utils/html.js";
+import { LazyMedia } from "./utils/lazyMedia.js";
+import { I18n } from "./core/i18n/i18n.js";
+import { LocalStore } from "./core/storage/localStore.js";
+import { TmdbSettingsStore } from "./data/local/tmdbSettingsStore.js";
+
+function mountConfigError() {
+  const app = document.getElementById("app");
+  if (!app) {
+    return;
+  }
+
+  app.innerHTML = `
+    <div class="screen" style="display:flex;align-items:center;justify-content:center;padding:48px;box-sizing:border-box;">
+      <div style="max-width:900px;background:#1a1c20;border:1px solid rgba(255,255,255,0.12);border-radius:18px;padding:28px 32px;">
+        <h1 style="margin:0 0 14px 0;">${I18n.t("app.config_missing_title")}</h1>
+        <p style="margin:0;opacity:0.85;line-height:1.45;">
+          ${I18n.t("app.config_missing_body")}
+        </p>
+      </div>
+    </div>
+  `;
+}
+
+document.addEventListener("DOMContentLoaded", async () => {
+  console.log("Nuvio LG starting...");
+  installGlobalInnerHtmlSanitizer();
+  const uiLanguage = I18n.init();
+  if (LocalStore.get("tmdbSettings", null) == null) {
+    TmdbSettingsStore.set({ language: uiLanguage === "it" ? "it-IT" : "en-US" });
+  }
+
+  if (!hasSupabaseConfig()) {
+    mountConfigError();
+    return;
+  }
+
+  Router.init();
+  FocusEngine.init();
+  ThemeManager.apply();
+  LazyMedia.install(document.getElementById("app") || document.body);
+
+  let playerInitialized = false;
+  const ensurePlayerInitialized = () => {
+    if (playerInitialized) {
+      return;
+    }
+    PlayerController.init();
+    playerInitialized = true;
+  };
+
+  AuthManager.subscribe((state) => {
+    if (state === AuthState.LOADING) {
+      StartupSyncService.stop();
+      Router.navigate("splash");
+    }
+
+    if (state === AuthState.SIGNED_OUT) {
+      StartupSyncService.stop();
+      Router.navigate("authQrSignIn");
+    }
+
+    if (state === AuthState.AUTHENTICATED) {
+      ensurePlayerInitialized();
+      StartupSyncService.start();
+      Router.navigate("profileSelection");
+    }
+  });
+
+  await AuthManager.bootstrap();
+});

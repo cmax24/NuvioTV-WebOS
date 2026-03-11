@@ -1,0 +1,46 @@
+:root[data-theme="dark"] {
+    --bg-color: #0e0f12;
+    --text-color: #ffffff;
+    --focus-color: #f5f8fc;
+    --card-bg: #1a1c20;
+}
+
+:root[data-theme="cinema"] {
+    --bg-color: #08090c;
+    --text-color: #f3f6fb;
+    --focus-color: #9ad1ff;
+    --card-bg: #13171d;
+    --theme-color-hex-0e0f12: #08090c;
+    --theme-color-hex-06090e: #05060a;
+    --theme-color-hex-07090d: #06070b;
+    --theme-color-hex-05090f: #04050a;
+    --theme-color-hex-04070c: #030409;
+    --theme-color-hex-050b14: #04070f;
+    --theme-color-hex-0a1727: #0d1c30;
+    --theme-color-hex-1a2230: #162030;
+    --theme-color-rgba-190-40-18-0p26: rgba(130, 66, 44, 0.24);
+    --theme-color-rgba-195-44-28-0p22: rgba(130, 66, 44, 0.2);
+    --theme-color-rgba-195-44-28-0p18: rgba(130, 66, 44, 0.16);
+    --theme-color-rgba-255-255-255-0p03: rgba(255, 255, 255, 0.035);
+    --theme-color-rgba-255-255-255-0p04: rgba(255, 255, 255, 0.045);
+    --theme-color-rgba-255-255-255-0p06: rgba(255, 255, 255, 0.07);
+    --theme-color-rgba-255-255-255-0p08: rgba(255, 255, 255, 0.1);
+    --theme-color-rgba-255-255-255-0p12: rgba(255, 255, 255, 0.14);
+    --theme-color-rgba-255-255-255-0p14: rgba(255, 255, 255, 0.16);
+    --theme-color-rgba-255-255-255-0p18: rgba(255, 255, 255, 0.2);
+    --theme-color-rgba-255-255-255-0p2: rgba(255, 255, 255, 0.22);
+    --theme-color-rgba-255-255-255-0p22: rgba(255, 255, 255, 0.24);
+    --theme-color-rgba-255-255-255-0p24: rgba(255, 255, 255, 0.26);
+    --theme-color-rgba-255-255-255-0p28: rgba(255, 255, 255, 0.3);
+    --theme-color-rgba-255-255-255-0p3: rgba(255, 255, 255, 0.32);
+    --theme-color-rgba-245-249-255-0p2: rgba(154, 209, 255, 0.2);
+    --theme-color-rgba-245-249-255-0p22: rgba(154, 209, 255, 0.22);
+    --theme-color-rgba-245-249-255-0p24: rgba(154, 209, 255, 0.24);
+    --theme-color-rgba-245-249-255-0p26: rgba(154, 209, 255, 0.26);
+    --theme-color-rgba-245-249-255-0p32: rgba(154, 209, 255, 0.32);
+    --theme-color-rgba-245-249-255-0p45: rgba(154, 209, 255, 0.45);
+    --theme-color-rgba-245-249-255-0p9: rgba(154, 209, 255, 0.9);
+    --theme-color-rgba-245-249-255-0p95: rgba(154, 209, 255, 0.95);
+    --theme-color-rgba-245-249-255-0p96: rgba(154, 209, 255, 0.96);
+    --theme-color-rgba-245-249-255-0p98: rgba(154, 209, 255, 0.98);
+}

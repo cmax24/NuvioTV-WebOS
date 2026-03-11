@@ -1,0 +1,8 @@
+docs/
+android/
+dist/
+scripts/
+README.md
+AGENTS.md
+*.ipk
+package.json
